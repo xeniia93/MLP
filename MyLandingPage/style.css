@@ -1,0 +1,198 @@
+/* Общие настрйоки */
+
+@font-face {
+    font-family: 'Ostrovsky';
+    src: url(font/Ostrovsky/Ostrovsky-Bold_0.otf);
+}
+
+body {
+    background-color: var(--grey);
+}
+ 
+* {
+    margin: 0;
+    padding: O;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+* { 
+    box-sizing: border-box;
+}
+
+:root {
+    --grey:#737070;
+    --emerald:#0A3939;
+    --white:#fff;
+    --greenlight:#8eddab;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+}
+
+a:hover{
+    color: var(--emerald);
+}
+
+
+button {
+    text-decoration: underline;
+}
+
+h1, h3 {
+    font-family: 'Ostrovsky';
+    text-align: center;
+}
+
+
+/* Навигация по странице */
+
+
+.navbar {    
+    display: grid;
+    grid-template-columns: [start] 250px [line2] 250px [line3] 250px [line4] 250px [end];
+}
+
+.navbar a {
+    transition: color .3s;
+
+}
+
+.decorate_1{
+    width: 100%;
+    flex-basis: 100%;
+}
+
+
+.img_logo {
+    width: 250%;
+    margin: 3% 0% 0% 0%;
+}
+ 
+
+/* Общее поле */
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15%;
+    margin: 10% 0%;
+}
+
+.img_1 {
+    max-width: 100%;
+    min-height: 100%;
+    margin: -33% 0% 0% 23%;
+}
+
+.decorate_2 {
+    width: 100%;
+    flex-basis: 100%;
+}
+
+/* .about_me {
+    top: 135%;
+    filter: invert(70%);
+    color: #E1E1E1;
+    font-family: 'Ostrovsky';
+} */
+
+article {
+    text-align: left;
+}
+
+.main h1 {
+    /* margin: 5% 5% 7% 10%; */
+    align-self: flex-start;
+    padding: 2%;
+}
+
+.main h3 {
+    /* margin: 5% 5% 7% 10%; */
+    align-self: start;
+    padding: 2%;
+    text-align: left;
+}
+
+
+
+
+/* general */
+
+.general {
+    display: flex;
+    gap: 5%;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+}
+  
+
+  
+  h2 {
+    font-weight: 400;
+    margin: 2rem 0 0.25rem 0;
+  }
+  
+
+  figure {
+    margin-top: 10%;
+    width: 500px;
+    aspect-ratio: 8 / 5;
+    --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
+    --accent: hsl(280 80% 40%);
+    transition: background 0.2s;
+    background:
+      radial-gradient(circle at top left, var(--accent), transparent 75%),
+      var(--bg);
+    /* margin: 0; */
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+  }
+  
+  figure:after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    bottom: 0%;
+    left: 10%;
+    background: linear-gradient(-65deg, var(--bg) 50%, var(--accent) 50%);
+    filter: blur(25px);
+    transform:
+      translateX(calc(var(--hover) * 15%))
+      scale(calc(1 + (var(--hover) * 0.2)));
+    transition: transform 0.2s, background 0.2s;
+  }
+  
+  figure img {
+    transform:
+      translateX(calc(var(--hover) * -15%))
+      scale(calc(1 + (var(--hover) * 0.2)));
+    transition: transform 0.2s;
+    align-items: center;
+    padding: 24% 43%;
+  }
+  
+  article {
+    --hover: 0;
+  }
+  
+  article:hover {
+    --hover: 1;
+  }
+
+/* media */
+
+@media (min-width:992px) {
+    .navbar {
+    } 
+}
